@@ -1,9 +1,7 @@
 <template>
-  <div class="bg-gray-200 min-h-screen">
-    <div class="w-full h-screen flex items-center justify-center">
-      <p class="text-xl text-green-800 font-bold">ATK CHECK TEST2 SYSTEM</p>
-    </div>
-  </div>
+  <layout>
+    sdfhdsjkfhdhfds
+  </layout>
 </template>
 
 <style>
@@ -13,11 +11,13 @@
 <script>
 import {defineComponent} from 'vue'
 import {Head, Link} from '@inertiajs/inertia-vue3';
+import Layout from "@/Layouts/Layout";
 
 export default defineComponent({
   components: {
     Head,
     Link,
+    Layout
   },
   props: {
     canLogin: Boolean,
