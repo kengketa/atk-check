@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-200 min-h-screen">
     <div class="w-full h-screen flex items-center justify-center">
-      <p class="text-xl text-green-800 font-bold">ATK CHECK SYSTEM</p>
+      <p class="text-xl text-green-800 font-bold">ATK CHECK TEST SYSTEM</p>
     </div>
   </div>
 </template>
