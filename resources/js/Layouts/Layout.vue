@@ -1,7 +1,5 @@
 <template>
-  <div class="relative overflow-x-hidden custom-background min-h-screen"
-       :style="backgroundComputedStyle"
-  >
+  <div class="relative overflow-x-hidden custom-background min-h-screen">
     <NavBar @nav-click="toggleSidebar()" />
     <SideBar :show="showSideBar" />
     <div class="w-full pt-24 transform transition ease-in-out duration-500"

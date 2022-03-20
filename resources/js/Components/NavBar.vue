@@ -14,16 +14,12 @@
 <script>
 import {defineComponent} from 'vue'
 import {Link} from '@inertiajs/inertia-vue3';
-import vClickOutside from 'click-outside-vue3'
 
 
 export default defineComponent({
   name: "HeadNavBar",
-  directives: {
-    clickOutside: vClickOutside.directive
-  },
   components: {
-    Link, vClickOutside
+    Link,
   },
   mounted() {
 
