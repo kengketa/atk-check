@@ -5,7 +5,7 @@
     <div class="w-full pt-24 transform transition ease-in-out duration-500"
          :class="showSideBar ?'md:pl-60' : 'pl-0'"
     >
-      <div class="px-4 md:px-10 py-2">
+      <div class="px-4">
         <div class="w-full">
           <slot></slot>
         </div>
