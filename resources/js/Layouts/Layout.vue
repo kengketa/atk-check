@@ -24,6 +24,7 @@ import SideBar from "@/Components/SideBar";
 import {defineComponent} from "vue";
 import {Head, Link} from "@inertiajs/inertia-vue3";
 
+const xs = 360;
 const sm = 640;
 const md = 768;
 const lg = 1024;
@@ -40,7 +41,7 @@ export default defineComponent({
     return {
       width: window.innerWidth,
       height: window.innerHeight,
-      sm, md, lg, xl,
+      xs, sm, md, lg, xl,
       showSideBar: false
     }
   },
