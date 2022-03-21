@@ -1,6 +1,6 @@
 <template>
   <layout>
-    sdfhdsjkfhdhfds
+    ply
   </layout>
 </template>
 
