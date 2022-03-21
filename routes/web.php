@@ -23,6 +23,9 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+Route::get('/ken', function () {
+    return Inertia::render('Index', []);
+});
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
