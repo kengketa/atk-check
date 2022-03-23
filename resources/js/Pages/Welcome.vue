@@ -13,75 +13,94 @@
     <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"> Previous </a>
     <a href="#" class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"> Next </a>
   </div>
-  <div class="hidden sm:flex-1 sm:flex sm:justify-between">
+  <div class="hidden sm:flex-1 sm:flex sm:justify-between mt-6">
    <div class="static ...">
-    <div> 
+    <div class="relative"> 
       <div
         @click="toggleShow()"
         class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
-        rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500 transition duration-500 transform ease-in-out hover:scale-90 hover:text-white mt-8">
-        <p>jan</p>
-      </div>
-      <div
-        class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
         rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500 transition duration-500 transform ease-in-out hover:scale-90 hover:text-white">
-        <p>jan</p>
+        <p>{{ selectedMonth }}</p>
       </div>
-      <div
-        class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
-        rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500 transition duration-500 transform ease-in-out hover:scale-90 hover:text-white">
-        <p>jan</p>
-      </div>
-      <div
-        class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
-        rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500 transition duration-500 transform ease-in-out hover:scale-90 hover:text-white">
-        <p>jan</p>
-      </div>
-      <div
-        class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
-        rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500 transition duration-500 transform ease-in-out hover:scale-90 hover:text-white">
-        <p>jan</p>
-      </div>
-      <div
-        class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
-        rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500 transition duration-500 transform ease-in-out hover:scale-90 hover:text-white">
-        <p>jan</p>
-      </div>
-      <div
-        class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
-        rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500 transition duration-500 transform ease-in-out hover:scale-90 hover:text-white">
-        <p>jan</p>
-      </div>
-      <div
-        class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
-        rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500 transition duration-500 transform ease-in-out hover:scale-90 hover:text-white">
-        <p>jan</p>
-      </div>
-      <div
-        class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
-        rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500 transition duration-500 transform ease-in-out hover:scale-90 hover:text-white">
-        <p>jan</p>
-      </div>
-      <div
-        class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
-        rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500 transition duration-500 transform ease-in-out hover:scale-90 hover:text-white">
-        <p>jan</p>
-      </div>
-      <div
-        class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
-        rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500 transition duration-500 transform ease-in-out hover:scale-90 hover:text-white">
-        <p>jan</p>
-      </div>
-      <div
-        class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
-        rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500 transition duration-500 transform ease-in-out hover:scale-90 hover:text-white">
-        <p>jan</p>
+      <div v-if="showMonthList" class="absolute top-10 z-50" id="month-group"> 
+        <div
+          @click="selectMonth(null)"
+          class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
+          rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500">
+          <p>None</p>
+        </div>
+        <div
+          @click="selectMonth('Jan')"
+          class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
+          rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500">
+          <p>Jan</p>
+        </div>
+        <div
+          @click="selectMonth('Feb')"
+          class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
+          rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500">
+          <p>Feb</p>
+        </div>
+         <div
+          @click="selectMonth('Mar')"
+            class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
+            rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500">
+            <p>Mar</p>
+        </div>
+        <div
+          @click="selectMonth('Apr')"
+          class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
+            rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500">
+            <p>Apr</p>
+        </div>
+        <div
+          @click="selectMonth('May')"
+          class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
+          rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500">
+          <p>May</p>
+        </div>
+        <div
+          @click="selectMonth('Jun')"
+          class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
+          rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500">
+          <p>Jun</p>
+        </div>
+        <div
+          @click="selectMonth('Jul')"
+          class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
+          rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500">
+          <p>Jul</p>
+        </div>
+        <div
+          @click="selectMonth('Aug')"
+          class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
+          rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500">
+          <p>Aug</p>
+        </div>
+        <div
+          @click="selectMonth('Sep')"
+          class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
+          rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500">
+          <p>Sep</p>
+        </div>
+        <div
+          @click="selectMonth('Nov')"
+          class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
+          rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500">
+          <p>Nov</p>
+        </div>
+        <div
+          @click="selectMonth('Dec')"
+          class="border border-gray-500 w-16 h-10 flex justify-center items-center bg-gray-200
+          rounded-md shadow shadow-md cursor-pointer hover:bg-gray-500">
+          <p>Dec</p>
+        </div>
       </div>
     </div>
     </div>
     
       <div> 
-      <nav class="mt-8 relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+      <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
 
         <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
         <a href="#" aria-current="page" class="rounded-md z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-3.5 py-2 border text-sm font-medium"> 1 </a>
@@ -260,11 +279,33 @@ export default defineComponent({
     Head,
     Link,
   },
-  props: {
-    canLogin: Boolean,
-    canRegister: Boolean,
-    laravelVersion: String,
-    phpVersion: String,
+  data(){
+    return{
+      showMonthList:false,
+      selectedMonth:'month'
+    }
+  },
+  methods:{
+    toggleShow(){
+      if(this.showMonthList == false){
+       return this.showMonthList=true;
+      }
+      if(this.showMonthList == true){
+        return  this.showMonthList=false;
+      }
+    },
+    selectMonth(month){
+      if(month == null){
+          this.selectedMonth = 'month';
+          this.showMonthList = false;
+          return;
+      }
+      if(month != null){
+          this.selectedMonth = month;
+          this.showMonthList = false;
+          return;
+      }
+    }
   }
 })
 </script>
