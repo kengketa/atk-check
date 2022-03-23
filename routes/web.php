@@ -24,7 +24,7 @@ Route::get('/', function () {
     ]);
 });
 Route::get('/ken', function () {
-    return Inertia::render('Index', []);
+    return Inertia::render('vFor', []);
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
