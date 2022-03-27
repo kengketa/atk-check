@@ -41,23 +41,21 @@
     </div>
   </div>
 </div>
-      <h2 class="text-2xl font-extrabold text-gray-900 mt-8">Atkcheck</h2>
+<h2 class="text-2xl font-extrabold text-gray-900 mt-8">Atkcheck</h2>
+<div class="flex gap-4 flex-wrap">
   <div v-for="(atkTest,index) in atkTests" :key="index">
-    <div class="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
-        <div class="group relative">
-           <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-              <img src="https://www.sikarin.com/wp-content/uploads/2021/08/3813357-1024x683.jpg">
-           </div>
-              <h3 class="mt-6 text-sm text-gray-500">
-              <a href="#">
-              <span class="absolute inset-0"></span>
-              {{atkTest.studentName}}
-              </a>
-              </h3>
-              <p class="text-base font-semibold text-gray-900">นาย ววววววว นนนนน</p>
+    <div class="w-60 relative rounded-md overflow-hidden">
+        <img class="w-full object-cover" :src="atkTest.image" alt="">
+        <div class="flex justify-center bg-gray-200 py-2">
+          <p>{{atkTest.studentName}}</p>
         </div>
-     </div>
+        <div class="absolute top-0 right-0 bg-gray-200 w-6 h-6 flex justify-center items-center">
+            <p class="text-sm">1</p>
+        </div>
+    </div>
    </div>
+</div>
+  
     
 
       
@@ -98,6 +96,11 @@ export default defineComponent({
        ],
        atkTests:[ 
          {id:1,studentName:'Name 1',date:'10/1/2022',image:'https://www.sikarin.com/wp-content/uploads/2021/08/3813357-1024x683.jpg'},
+         {id:2,studentName:'Name 2',date:'11/1/2022',image:'https://www.sikarin.com/wp-content/uploads/2021/08/3813357-1024x683.jpg'},
+         {id:3,studentName:'Name 3',date:'12/1/2022',image:'https://www.sikarin.com/wp-content/uploads/2021/08/3813357-1024x683.jpg'},
+         {id:4,studentName:'Name 4',date:'13/1/2022',image:'https://www.sikarin.com/wp-content/uploads/2021/08/3813357-1024x683.jpg'},
+         {id:5,studentName:'Name 5',date:'14/1/2022',image:'https://www.sikarin.com/wp-content/uploads/2021/08/3813357-1024x683.jpg'},
+         {id:6,studentName:'Name 6',date:'15/1/2022',image:'https://www.sikarin.com/wp-content/uploads/2021/08/3813357-1024x683.jpg'},
 ]
     }
   },
